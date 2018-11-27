@@ -15,10 +15,23 @@ function addExcitement (theWordArray) {
 
     for (let i = 0; i < theWordArray.length; i++) {
         // Concatenate the new word onto buildMeUp
-        buildMeUp += sentence[i] + ' ';
+        
+        /*
+            If the current value of `i` divided by 3 has no
+            remainder, add an exclamation point to the end of
+            the word and then concatenate it to `buildMeUp`.
+
+            Otherwise, just concatenate the word itself.
+         */
+        if (i % 3 === 0) {
+            buildMeUp += sentence[i] + '! ';
+        } else {
+            buildMeUp += sentence[i] + ' ';
+        }
         // Print buildMeUp to the console
         console.log(buildMeUp)
     }
+    
 
 }
 
